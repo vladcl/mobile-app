@@ -1,17 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
       <View style={styles.gameContainer}>
-
-          <View style={styles.titles}>
-            <Text style={styles.title}>God of War: Ragnarok</Text>
-            <Text style={styles.subTitle}>Available November 9, 2022</Text>
-          </View>
-
+        <ImageBackground
+          source={require('../FirstApp/assets/cropped-720-1520-1079546.png')}
+          style={styles.image}
+        />
+        <View style={styles.titles}>          
+          <Image
+            source={require('./assets/5ede4a3fb760540004f2c5e9.png')}
+            style={styles.logo}
+          />
+          <Text style={styles.subTitle}>Tanjiro returns in 2023</Text>
+        </View>
       </View>
 
     </View>
@@ -31,16 +36,25 @@ const styles = StyleSheet.create({
 
   },
   titles: {
-    marginTop: '30%',
+    marginTop: '15%',
     width: '100%',
     alignItems: 'center',
+    marginBottom: '10%'
   },
-
-  title: {
-
-  },
-
   subTitle: {
-
+    fontSize: 16,
+    color: '#5c5e62',
+    fontWeight: '500'
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    position: 'absolute'
+  },
+  logo: {
+    width: '45%',
+    height: '45%',
+    resizeMode: 'contain',
   }
 });
