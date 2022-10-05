@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 
-export default function App() {
+export default function App() {  
   return (
     <View style={styles.container}>
 
@@ -14,8 +14,8 @@ export default function App() {
           <Image
             source={require('./assets/5ede4a3fb760540004f2c5e9.png')}
             style={styles.logo}
-          />
-          <Text style={styles.subTitle}>Tanjiro returns in 2023</Text>
+          />         
+          <Text style={styles.subTitle}>2023</Text>
         </View>
       </View>
 
@@ -42,9 +42,10 @@ const styles = StyleSheet.create({
     marginBottom: '10%'
   },
   subTitle: {
-    fontSize: 16,
-    color: '#5c5e62',
-    fontWeight: '500'
+    fontSize: 17,
+    color: '#000000',
+    fontStyle: 'italic',
+    fontWeight: '500',   
   },
   image: {
     width: '100%',
@@ -53,8 +54,8 @@ const styles = StyleSheet.create({
     position: 'absolute'
   },
   logo: {
-    width: '45%',
-    height: '45%',
+    width: '46%',
+    height: '46%',
     resizeMode: 'contain',
   }
 });
